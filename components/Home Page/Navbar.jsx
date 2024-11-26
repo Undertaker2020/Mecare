@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <Wrapper>
             <nav className="w-full h-[86px] flex justify-between items-center">
-                <Link href="/" className="logo flex items-center text-neutral-800 font-bold gap-2">
+                <Link href="/public" className="logo flex items-center text-neutral-800 font-bold gap-2">
                     <Image src={logo} width={40} height={40} alt="logo"/>
                     <span>Mecare</span>
                 </Link>
@@ -22,7 +22,7 @@ export default function Navbar() {
                 </ul>
                 <div className="flex items-center text-neutral-800 font-medium gap-[30px]">
                     <Link href="/singup">Join Doctor</Link>
-                    <Button>
+                    <Button className="bg-primary-500 w-[179px] h-[46px]">
                         Get Appointment
                     </Button>
                 </div>
