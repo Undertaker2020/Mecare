@@ -7,16 +7,18 @@ import {DATA_CARDS_CONTENT} from "@/data"
 import bloodIcon from "@/assets/Home Page/blood-icon.svg"
 import noDrugsIcon from "@/assets/Home Page/no-drugs-icon.svg"
 import Button from "@/components/ui/Button";
-
+import EllipseFirst from "@/assets/Home Page/Ellipse-1.svg"
+import EllipseSecond from "@/assets/Home Page/Ellipse-2.svg"
 export default function Header() {
     return (
         <Wrapper className="mt-10 mb-20">
             <GridTemplate>
                 <div
-                    className="relative w-full h-[513px] col-span-3 bg-gradient-to-bl from-[#64D3C2]  to-[#E1F0D7] rounded-2xl">
+                    className="relative w-full h-[513px] col-span-3 bg-gradient-to-bl from-[#64D3C2]  to-[#E1F0D7]
+                    rounded-2xl overflow-hidden">
                     <Image height={452} quality={100} src={doctorImage} alt="doctor-image"
-                           className="z-10 absolute bottom-0 left-[51.5%] transform -translate-x-1/2"/>
-                    <div className="absolute top-[76px] left-1/2 transform -translate-x-1/2 z-0">
+                           className="z-20 absolute bottom-0 left-[51.5%] transform -translate-x-1/2"/>
+                    <div className="absolute top-[76px] left-1/2 transform -translate-x-1/2 z-10">
                         <svg width="1207" height="80" viewBox="0 0 1207 80" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_6802_6298)">
@@ -94,16 +96,15 @@ export default function Header() {
                         </svg>
 
                     </div>
-                    <div className="w-[90%] flex justify-between items-center absolute bottom-[45px] left-[5%]">
+                    <div className="w-[90%] flex justify-between items-center absolute bottom-[45px] left-[5%] z-10">
                         <p className="text-body-xl w-[355px]">
                             Prioritizing your well-being with top-tier medical expertise and compassionate care tailored
                             to your needs
                         </p>
                         <Button className="bg-primary-600 h-[48px] w-[248px]">Schedule An Appointment</Button>
                     </div>
-
                     <div className="flex justify-between items-center text-neutral-700 w-[728px] absolute top-[205px]
-                                    left-[53%] transform -translate-x-1/2 z-0">
+                                    left-[53%] transform -translate-x-1/2 z-10">
                         <span className="flex items-center text-[22px] font-medium leading-[150%] gap-[6px]">
                         <div className="bg-white rounded-full p-[6px]">
                             <Image src={bloodIcon} alt={bloodIcon}/>
@@ -117,6 +118,8 @@ export default function Header() {
                         No more medications
                     </span>
                     </div>
+                    <Image src={EllipseFirst} alt={EllipseFirst} className="absolute z-0"/>
+                    <Image src={EllipseSecond} alt={EllipseSecond} className="absolute bottom-0 right-0 z-0"/>
                 </div>
 
                 {DATA_CARDS_CONTENT.map((card, index) => (
